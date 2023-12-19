@@ -6,9 +6,10 @@ stopp.disabled=true;
 start.onclick= function(){
    start.disabled=true;
    stopp.disabled=false;
+   var Maxx=Number(document.getElementById("maxNumber").value)
     function dice()
     {
-        let x=Math.ceil(Math.random()*10)
+        let x=Math.ceil(Math.random()*Maxx)
         return x
     }
     interval = setInterval(
@@ -24,11 +25,3 @@ stopp.onclick= function(){
     stopp.disabled=true;
     clearInterval(interval);
 }
-// let x
-// document.getElementById("startButton").onclick= function(){
-//      x=Math.ceil(Math.random()*10)
-//     console.log(x);
-//     document.getElementById("number").innerHTML = x;
-// }
-
-
